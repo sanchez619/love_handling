@@ -95,3 +95,35 @@ main {
 footer {
     background-color: orange;
 }
+
+/* media query - tablet and larger: 768px+*/
+@media screen and (min-width: 768px){
+    /* Header */
+    nav {
+        display: block;
+        position: relative;
+        width: fit-content;
+        padding-right: 1rem;
+    }
+    #menu {
+        display: flex;
+    }
+    #menu > li  {
+        padding-left: 1rem;
+    }
+    .nav-toggle-label  {
+        display: none;
+    }
+    #logo  {
+        font-size: 280%;
+        line-height: 75px;
+        margin: 0 0.5rem;
+    }
+
+    /* Main content */
+    main  {
+        /* Push main comment down to accomodate for larger header */
+        margin-top: 79px;
+    }
+
+}
