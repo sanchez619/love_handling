@@ -211,6 +211,14 @@ main {
     color: #3a3a3a;
 }
 
+/* media query - large or landscape phones: 576px and up */
+@media screen and (min-width: 576px){
+    #photos {
+        column-count: 2;
+        column-gap: 0;
+    }
+}
+
 /* media query - tablet and larger: 768px+*/
 @media screen and (min-width: 768px){
     /* Header */
@@ -265,12 +273,21 @@ main {
         align-self: flex-end;
     }
 
+    /* Gallery */
+    #photos {
+        column-count: 3;
+    }
 }
 
 @media screen and (min-width: 992px) {
     /* Header */
     #menu a:hover  {
         border-bottom: 1px solid #3a3a3a;
+    }
+
+    /* Gallery */
+    #photos {
+        column-count: 3;
     }
 }
 
