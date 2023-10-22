@@ -140,6 +140,14 @@ main {
     border-top: 1px solid #3a3a3a;
     margin: 5px 0;
 }
+
+#circle-cover-bg  {
+    background: url("../images/reasons-image.webp") no-repeat top center/cover;
+    width: 90vw;
+    height: 90vw;
+    margin-bottom: 20px;
+}
+
 /* Footer */
 #social-networks  {
     text-align: center;
