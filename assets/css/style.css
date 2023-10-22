@@ -1,7 +1,7 @@
-/* Google fonts import */
+/* Additional fonts */
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@200;300;400;500;600;700&display=swap');
 
-/* Asterisk wildcard selector to override default styles added by the browser */
+/* Asterisk wildcard selector to override default styles set by browser */
 * {
     padding: 0;
     margin: 0;
@@ -18,13 +18,15 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
-h1,
-h2,
-h3 {
+h1, h2, h3 {
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
     color: #252525;
+}
+
+.hidden-heading {
+    display: none;
 }
 
 /* Header */
@@ -40,27 +42,28 @@ header {
     align-items: baseline;
 }
 
-header a {
+header a  {
     text-decoration: none;
     color: inherit;
 }
 
-#menu {
+#menu  {
     font-size: 110%;
     letter-spacing: 4px;
     list-style-type: none;
 }
 
-#menu>li {
+#menu > li  {
     margin-bottom: 1em;
 }
 
-.active {
+.active  {
     border-bottom: 1px solid #3a3a3a;
 }
 
 /* Navbar styles with dropdown toggle */
-nav {
+
+nav  {
     position: absolute;
     background-color: #ffffff;
     width: 100%;
@@ -71,12 +74,12 @@ nav {
     top: 100%;
 }
 
-/* Nav toggle */
-#nav-toggle:checked~nav {
+/* nav toggle */
+#nav-toggle:checked~nav  {
     display: block;
 }
 
-#nav-toggle {
+#nav-toggle  {
     display: none;
 }
 
@@ -84,24 +87,24 @@ nav {
     font-size: 2rem;
 }
 
-/* Main content */
+/* Main Content */
 main {
-    /* Make main element take up any surplus space to push footer down */
+    /* Make main element take up surplus space to push footer down */
     flex: 1 0 auto;
     margin-top: 47px;
 }
 
 /* Hero section */
-#hero {
+#hero  {
     height: 600px;
     width: 100%;
-    background: url("../images/hero-image.webp") no-repeat center center/cover;
+    background: url(../images/hero-image.webp) no-repeat center center/cover;
     position: relative;
 }
 
-#cover-text {
-    /* Final rgba value sets the opacity so it is semi-transparent */
-    background-color: rgba(241, 109, 107, .7);
+#cover-text  {
+    /* final rgba rule sets the opacity so that it is  semi-transparent */
+    background-color: rgba(241, 109, 107, 0.7);
     font-size: 130%;
     position: absolute;
     bottom: 30px;
@@ -111,25 +114,24 @@ main {
     padding-left: 10px;
 }
 
-#cover-text>h2,
-#cover-text>h3 {
+#cover-text > h2, #cover-text > h3  {
     color: #ffffff;
 }
 
 /* Reasons section */
-#reasons {
+#reasons  {
     width: 90%;
     margin: 20px auto;
 }
 
-#reasons h2 {
-    margin-bottom: 20px;
-    text-align: center;
+#reasons h2  {
     font-size: 280%;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-#benefits-physical>div,
-#benefits-mental>div {
+#benefits-physical > div,
+#benefits-mental > div {
     line-height: 20px;
     margin-bottom: 20px;
 }
@@ -138,56 +140,55 @@ main {
     padding: 0 20px;
 }
 
-#benefits hr {
+#benefits hr  {
     border-top: 1px solid #3a3a3a;
     margin: 5px 0;
 }
 
-#circle-cover-bg {
-    background: url('../images/reasons-image.webp') no-repeat top center / cover;
-    height: 90vw;
+#circle-cover-bg  {
+    background: url("../images/reasons-image.webp") no-repeat top center/cover;
     width: 90vw;
+    height: 90vw;
     margin-bottom: 20px;
-    /* Makes the square image into a circle */
+    /*makes the square into a large circle*/
     border-radius: 50%;
     max-width: 300px;
     max-height: 300px;
 }
 
-#benefits-image {
+#benefits-image  {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
-/* Meetups Section */
-#times  {
+/* Meetup Times section */
+#times {
     background: url('../images/dublin-city.webp') no-repeat center/cover;
-    /* handles responsivity without the need for a media query */
+    /* Handles responsivity without the need for a media query */
     display: flex;
     flex-wrap: wrap;
 }
 
-#times div  {
+#times div {
     color: #fafafa;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, .6);
     padding: 15px;
     text-align: center;
-    /* This will not wrap on screens 400px wide or less.
-    Each div will expand to fill the available space on its row. */
+    /* This will not wrap on screens of less than 400px wide.
+    Each div will expand to fill the available space on its row */
     flex-basis: 200px;
     flex-grow: 1;
-    /*Creates a grid of meetup time divs over the background image*/
+    /* Creates a grid of meetup time divs over the background image */
     border: 2px solid white;
 }
 
-#times h3  {
-    /* Override the color in general styles */
+#times h3 {
+    /* Override the heading colour set in general styles */
     color: #fafafa;
 }
 
 /* Footer */
-#social-networks {
+#social-networks  {
     text-align: center;
     padding: 20px 0;
     display: flex;
@@ -195,55 +196,49 @@ main {
     list-style-type: none;
 }
 
-#social-networks i {
+#social-networks i  {
     font-size: 160%;
     padding: 5%;
     color: #3a3a3a;
 }
 
-/* Media query: tablets and larger (768px and up) */
-@media screen and (min-width: 768px) {
-
+/* media query - tablet and larger: 768px+*/
+@media screen and (min-width: 768px){
     /* Header */
     nav {
         display: block;
         position: relative;
-        box-shadow: none;
         width: fit-content;
         padding-right: 1rem;
     }
-
     #menu {
         display: flex;
     }
-
-    #menu>li {
+    #menu > li  {
         padding-left: 1rem;
     }
-
-    .nav-toggle-label {
+    .nav-toggle-label  {
         display: none;
     }
-
-    #logo {
+    #logo  {
         font-size: 280%;
         line-height: 75px;
         margin: 0 0.5rem;
     }
 
     /* Main content */
-    main {
-        /* Push main content down to accommodate larger header */
+    main  {
+        /* Push main comment down to accomodate for larger header */
         margin-top: 79px;
     }
-
     /* Hero */
-    #cover-text {
+
+    #cover-text  {
         width: 300px;
         right: 50px;
     }
 
-    /* Reasons section */
+    /* Reasons Section */
     #benefits-physical,
     #benefits-mental {
         display: flex;
@@ -251,50 +246,35 @@ main {
         width: 100%;
     }
 
-    #benefits-physical>div,
-    #benefits-mental>div {
+    #benefits-physical > div,
+    #benefits-mental > div  {
         width: 75%;
     }
 
-    #benefits-mental>div {
+    #benefits-mental  {
         text-align: end;
         align-self: flex-end;
     }
 
 }
 
-/* Large devices (laptops and desktops, 992px and up) */
 @media screen and (min-width: 992px) {
-    #menu a:hover {
+    /* Header */
+    #menu a:hover  {
         border-bottom: 1px solid #3a3a3a;
     }
 }
 
 @media screen and (min-width: 1200px) {
-
-    /* Reasons section */
-    #benefits {
+    #benefits > div  {
         display: flex;
-        flex-direction: row;
     }
 
-    #benefits>div {
-        flex: 1;
-    }
-
-    #benefits-image {
-        order: 0
-    }
-
-    #benefits-mental {
+    #benefits-physical  {
         order: 1;
     }
 
-    #benefits-mental>div {
-        align-self: flex-start;
-    }
-
-    #benefits-physical>div {
-        align-self: flex-end;
+    #benefits-image  {
+        order: 2;
     }
 }
