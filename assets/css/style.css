@@ -209,6 +209,24 @@ main {
         right: 50px;
     }
 
+    /* Reasons Section */
+    #benefits-physical,
+    #benefits-mental {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #benefits-physical > div,
+    #benefits-mental > div  {
+        width: 75%;
+    }
+
+    #benefits-mental  {
+        text-align: end;
+        align-self: flex-end;
+    }
+
 }
 
 @media screen and (min-width: 992px) {
@@ -216,4 +234,8 @@ main {
     #menu a:hover  {
         border-bottom: 1px solid #3a3a3a;
     }
+}
+
+@media screen and (min-width: 1200px) {
+    
 }
