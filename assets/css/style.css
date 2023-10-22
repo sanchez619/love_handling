@@ -287,7 +287,7 @@ main {
 
     /* Gallery */
     #photos {
-        column-count: 3;
+        column-count: 4;
     }
 }
 
